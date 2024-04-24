@@ -7,29 +7,54 @@
     <title>bubr</title>
   </head>
   <body>
-    <p> bubr </p>
-    <div class="embed-container">
-      <iframe width="640" height="390" 
-                          src="https://www.youtube.com/embed/OHHpYXQyQO4?autoplay=1" 
-                          frameborder="0" allowfullscreen></iframe>
+    <div class="holder">
+      <div class="news">BUBR</div>
     </div>
+    <div class="wrapper">
+      <video class="content"  controls autoplay>
+        <source src="bubrkurwa.webm" type="video/webm">
+      </video>
+
+    </div>
+    <div class="holder">
+      <div class="news">BUBR</div>
+    </div>
+      <script>
+        var video = document.querySelector('video');
+        video.muted = true;
+        video.play()
+      </script>
     <style>
-.embed-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
+.holder {
+  background:#927165;
+  padding:0.5rem;
   overflow: hidden;
-  max-width: 100%;
 }
-.embed-container iframe,
-.embed-container object,
-.embed-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.news {
+  animation : slide 10s linear infinite;
+
+}
+.wrapper {
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
+.content {
+  background: yellow;
+  margin: auto;
+  max-width: 1920px;
+}
+
+
+    @keyframes slide {
+      0% {
+        transform: translatex(0%)
+      }
+
+      100% {
+        transform: translatex(100%)
+      }
+    }
     </style>
   </body>
 </html>
